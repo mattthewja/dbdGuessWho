@@ -1,0 +1,101 @@
+body {
+    background: #111;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.board {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Card portrait style */
+.card {
+    position: relative;
+    background-color: #222222;
+    color: white;
+    text-align: center;
+    width: 120px;
+    aspect-ratio: 1;
+    border-radius: 10%;
+}
+
+.card img {
+    position: absolute;
+    border-radius: 10%;
+    background-color: #333333;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    display: block;
+    opacity: 1;
+}
+
+.card .portrait {
+    opacity: 1;
+    z-index: 1;
+}
+
+.card .flipped-img-icon {
+    opacity: 0;
+    z-index: 2;
+}
+
+.card.flipped .portrait {
+    opacity: 0;
+}
+
+.card.flipped .flipped-img-icon {
+    opacity: 1;
+}
+
+
+img.playerPortrait {
+    border-radius: 10%;
+    background-color: #333333;
+    width: 10%;
+    height: 10%;
+}
+
+/* Player info */
+
+#player-info {
+    width: 250px;
+    height: 200px;
+    position: relative;
+    justify-self: center;
+}
+
+#player-info img {
+    position: absolute;
+    border-radius: 10%;
+    background-color: #111111;
+    width: 50%;
+    object-fit: cover;
+    display: block;
+    opacity: 1;
+    justify-self: center;
+    background: #222222;
+}
+
+#player-info .portrait {
+    opacity: 1;
+    z-index: 1;
+}
+
+#player-info .flipped-img-icon {
+    opacity: 0;
+    z-index: 2;
+}
+
+#player-info.flipped .portrait{
+    opacity: 0;
+}
+
+#player-info.flipped .flipped-img-icon {
+    opacity: 1;
+}
