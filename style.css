@@ -1,3 +1,7 @@
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 body {
     background: #111;
     color: white;
@@ -5,12 +9,24 @@ body {
     text-align: center;
 }
 
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .board {
-    
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
+}
+
+#buttons button {
+    background-color: #666666;
+    color: white;
+    width: 5rem;
+    height: 5rem;
 }
 
 /* Card portrait style */
@@ -68,6 +84,7 @@ img.playerPortrait {
     height: 200px;
     position: relative;
     justify-self: center;
+    align-items: center;
 }
 
 #player-info img {
@@ -80,6 +97,7 @@ img.playerPortrait {
     opacity: 1;
     justify-self: center;
     background: #222222;
+    transform: translate(50%, -10%);
 }
 
 #player-info .portrait {
