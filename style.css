@@ -80,8 +80,8 @@ img.playerPortrait {
 /* Player info */
 
 #player-info {
-    width: 250px;
-    height: 200px;
+    width: 150px;
+    height: 225px;
     position: relative;
     justify-self: center;
     align-items: center;
@@ -91,12 +91,13 @@ img.playerPortrait {
     position: absolute;
     border-radius: 10%;
     background-color: #111111;
-    width: 50%;
+    width: 100%;
     object-fit: cover;
     display: block;
     opacity: 1;
     justify-self: center;
     background: #222222;
+    
 }
 
 #player-info .portrait {
