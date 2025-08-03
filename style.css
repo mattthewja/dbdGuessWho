@@ -97,7 +97,6 @@ img.playerPortrait {
     opacity: 1;
     justify-self: center;
     background: #222222;
-    transform: translate(50%, -10%);
 }
 
 #player-info .portrait {
