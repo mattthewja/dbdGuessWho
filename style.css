@@ -22,6 +22,11 @@ body {
     gap: 1rem;
 }
 
+#buttons {
+    display:flex;
+    flex-direction: row;
+}
+
 #buttons button {
     background-color: #666666;
     color: white;

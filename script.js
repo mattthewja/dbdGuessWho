@@ -48,7 +48,7 @@ playerInfo.addEventListener("click", () => {
     playerInfo.classList.toggle("flipped");
 });
 
-//* populate and logic for hiding portraits //
+//* populate and logic for hiding portraits
 
 function initialiseBoard() {
     const board = document.querySelector(".board");
@@ -75,6 +75,32 @@ function initialiseBoard() {
         })
     })
 }
+
+//* logic for random board state
+function randomiseBoard() { 
+    let characterArray = [];
+
+    characters.forEach(file => {
+        const randomIndex = Math.random().toString(36).substring(2, 10);
+        characterArray.push([randomIndex, file]);
+    })
+    characterArray.sort()
+    console.log(characterArray);
+    characterArray = characterArray.flat();
+    const charactersLength = characterArray.length;
+
+    characters = [];
+    for (let i = 1; i < charactersLength; i += 2) { // stupid as fuck (as the kids call it). I did not know how to randomise 
+        characters.push(characterArray[i]);         // at this time, so I used a randomised id generator, sorted it, then flattened
+    }                                               // because we know that odd indices are our character files
+}
+
+const randomiseBoardButton = document.getElementById("randomise-board");
+randomiseBoardButton.addEventListener("click", () => {
+    randomiseBoard();
+    initialiseBoard();
+    console.log("Init randomiseBoard()");
+})
 
 // Page start setup
 randomisePlayerCharacter();

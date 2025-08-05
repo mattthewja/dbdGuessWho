@@ -1,5 +1,10 @@
+v.1.2.0
+- feat: add randomise board button to site
+- feat: implement randomise board logic in script.js
+- style: add buttons container style
+
 v.1.1.2
-- fix: fix player portrait visual and increase size
+- fix: fix player portrait visual and increase portrait size
 
 v.1.1.1
 - chore: add survivor character portraits
